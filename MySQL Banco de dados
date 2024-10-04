@@ -1,0 +1,22 @@
+DROP DATABASE filmesDB;
+CREATE DATABASE IF NOT EXISTS filmesDB;
+USE filmesDB;
+
+-- Criação da tabela 'filme'
+CREATE TABLE IF NOT EXISTS filme (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    titulo VARCHAR(255) NOT NULL,
+    sinopse TEXT,
+    genero VARCHAR(100),
+    anoLancamento YEAR
+);
+
+-- Criação da tabela 'analise' com chave estrangeira para 'filme'
+CREATE TABLE IF NOT EXISTS analise (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    filme_id INT,
+    analise TEXT,
+    nota INT,
+    FOREIGN KEY (filme_id) REFERENCES filme(id) ON DELETE CASCADE ON UPDATE CASCADE
+);
+SET SQL_SAFE_UPDATES = 0;
