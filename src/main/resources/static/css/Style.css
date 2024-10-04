@@ -1,0 +1,32 @@
+#Filme {
+    text-decoration: none;  /* Remove o sublinhado */
+    color: inherit;  /* Mantém a cor herdada do elemento pai */
+}
+
+/* Define a cor do link ao passar o mouse por cima */
+Filme:hover {
+    color: #FF6347; /* Altere para a cor desejada */
+}
+
+
+.table{
+     align-items: center;
+    align-content: center;
+    width: 100%;
+    
+}
+
+#titulo{
+    align-items: center;
+    align-content: center;
+}
+
+#dell{
+    position: relative;
+    align-content: end;
+    align-items: end;
+}
+
+.btn{
+    background-color: purple;
+}
